@@ -6,5 +6,5 @@ element.innerHTML = 'New value';
 var img=document.getElementById('img');
 img.onClick = function()
 {
-    img.style.marginleft='100px';
+    modi.style.marginleft='100px';
 }
