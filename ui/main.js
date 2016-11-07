@@ -10,7 +10,7 @@ button.onclick=function()
     
     //capture response and store in a variable
     
-    reuest.onreadystatechange=function() {
+    request.onreadystatechange=function() {
         if(request.readyState === XMLHttpRequest.DONE){
             //take some action
             if(request.status ===200){
