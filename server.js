@@ -102,7 +102,7 @@ app.get('/submit-name',function(req,res){//URL:/submit-name?name=xxxx
     
     names.push(name);
     //JSON;java script notation
-    res.send(JSON.stringify(name));//1000
+    res.send(JSON.stringify(names));//1000
 });
 
 
