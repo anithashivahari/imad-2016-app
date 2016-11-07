@@ -1,17 +1,28 @@
 // counter code
-var button=document.getElementById('counter');
-var counter=0;
+var button= document.getElementById('counter');
+
 button.onclick=function()
 {
-    //make a request to counter endpoint
+    //create a request
     
+    var request=new XMLHttpRequest();
     
     
     //capture response and store in a variable
     
-    
-    // render the variable in the coorect span
-    counter = counter+1;
-    var span= document.getElementById('count');
+    reuest.onreadystatechange=function() {
+        if(request.readyState === XMLHttpRequest.DONE){
+            //take some action
+            if(request.status ===200){
+               var counter= request.responseText;
+                var span= document.getElementById('count');
     span.InnerHTML = counter.toString();
+            }
+        }
+    }; 
+    //make a request
+    request.open('GET','http://anithashivahari.imad.hasura-app.io/counter',true);
+    request.send(null);
+    // render the variable in the coorect 
+   
 }
