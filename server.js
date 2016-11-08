@@ -26,7 +26,7 @@ var articles={
             <p>
                 this is the conttent of my first article ,this is the content of my first articld
                 
-            </p>`
+            </p>` 
 },
     'article-two' :{
         title: 'article two Anitha',
