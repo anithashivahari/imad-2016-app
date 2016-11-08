@@ -56,7 +56,7 @@ var articles={
             </p>`},
     
 
-}
+};
 function createTemplate(data){
     var title=data.title;
     var date=data.date;
