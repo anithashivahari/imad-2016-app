@@ -105,7 +105,7 @@ var htmlTemplate=`
         pool.query('SELECT * FROM test',function(err,result)
         {
             if(err){
-                res.status(500).send;
+                res.status(500).send(err.toString());
                 
             }else
             {
