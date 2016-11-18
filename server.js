@@ -14,50 +14,7 @@ var config={
 var app = express();
 app.use(morgan('combined'));
 
-var articles={
-    'article-one' :{
-    
-  title: 'article One Anitha',
-  heading: 'Article One',
-  date: 'sep 5, 2016',
-  content: ` 
-   <p>
-                This is the content for my first article, this is the content of my first article, this is the content of my first article
-            </p>
-            <p>
-                this is the conttent of my first article ,this is the content of my first articld
-                
-            </p>` 
-},
-    'article-two' :{
-        title: 'article two Anitha',
-  heading: 'Article two',
-  date: 'sep 5, 2016',
-  content: ` 
-   <p>
-                This is the content for my second article, this is the content of my second article, this is the content of my second article
-            </p>
-            <p>
-                this is the conttent of my second article ,this is the content of my second articld
-                
-            </p>`
-        
-    },
-    'article-three':{
-        title: 'article three Anitha',
-  heading: 'Article three',
-  date: 'sep 10, 2016',
-  content: ` 
-   <p>
-                This is the content for my third article, this is the content of my third article, this is the content of my third article
-            </p>
-            <p>
-                this is the conttent of my third article ,this is the content of my third articld
-                
-            </p>`},
-    
 
-};
 function createTemplate(data){
     var title=data.title;
     var date=data.date;
@@ -147,7 +104,7 @@ app.get('/articles/:articleName',function(req,res){
     //articles[aarticleName] =={};
     //select * from article where article='article-one'
  
-    pool.query("SELECT * FROM article WHERE title=$1" + [req.params.articleName],function(err,result)
+    pool.query("SELECT * FROM article WHERE title=$1", [req.params.articleName],function(err,result)
     {
         if(err){
             res.status(500).send(err.toString());
